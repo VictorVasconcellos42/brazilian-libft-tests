@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 15:13:56 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/16 17:49:04 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/16 20:33:07 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	test_ft_memcpy(void)
 	int		buffer;
 
 	buffer = -1;
-	name = "Victor Moana Jorge Roberto Gabriel Claudinho";
-	name2 = "Victor Moana Jorge Roberto Gabriel Claudinho";
+	name = "Victor Moana Jorge Roberto Gabriel Claudio Pedro";
+	name2 = "Victor Moana Jorge Roberto Gabriel Claudio Pedro";
 	array = ft_split(name, ' ');
 	array2 = ft_split(name2, ' ');
 	puts("-------------------------------\n");
@@ -33,11 +33,11 @@ void	test_ft_memcpy(void)
 	puts("-------------------------------\n");
 	while (array[++buffer])
 	{
-		result = calloc(strlen(array[buffer] + 1), 1);
-		result2 = calloc(strlen(array2[buffer] + 1), 1);
+		result = calloc(strlen(array[buffer]) + 1, 1);
+		result2 = calloc(strlen(array2[buffer]) + 1, 1);
 		ft_memcpy(result, array[buffer], strlen(array[buffer]));
 		memcpy(result2, array2[buffer], strlen(array2[buffer]));
-		printf("Origin: %s\t My:%s\n", result, result2);
+		printf("Origin: %s\t\t My:%s\n", result, result2);
 		free(result);
 		free(result2);
 	}
