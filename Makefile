@@ -6,11 +6,11 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 08:06:57 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/06/16 17:41:50 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/06/17 10:23:22 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC	= tests/test_ft_atoi.c tests/test_ft_bzero.c tests/test_ft_memcpy.c
+SRC	= tests/test_ft_atoi.c tests/test_ft_bzero.c tests/test_ft_memcpy.c tests/test_ft_memmove.c
 
 MAIN = main
 
