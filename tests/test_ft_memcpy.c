@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 15:13:56 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/16 20:33:07 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/17 11:52:27 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	test_ft_memcpy(void)
 		result2 = calloc(strlen(array2[buffer]) + 1, 1);
 		ft_memcpy(result, array[buffer], strlen(array[buffer]));
 		memcpy(result2, array2[buffer], strlen(array2[buffer]));
+		if (strcmp(result, result2) == 0)
+			printf("OK!!!\n");
 		printf("Origin: %s\t\t My:%s\n", result, result2);
 		free(result);
 		free(result2);
