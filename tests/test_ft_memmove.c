@@ -6,11 +6,14 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:18:01 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/17 11:51:01 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/22 09:20:01 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/header.h"
+#define RED "\e[0;31m"
+#define GRN "\e[0;32m"
+#define RESET "\e[0m"
 
 void	test_ft_memmove(void)
 
@@ -38,8 +41,10 @@ void	test_ft_memmove(void)
 		ft_memmove(result, array[buffer], strlen(array[buffer]));
 		memmove(result2, array2[buffer], strlen(array2[buffer]));
 		if (strcmp(result, result2) == 0)
-			printf("OK!!\n");
-		printf("Origin: %s\t\t My:%s\n", result, result2);
+			printf(GRN "Teste[%i]: OK!!\n", buffer);
+		else
+			printf(RED "Teste[%i]: KO!!\n", buffer);
+		printf(RESET "Origin: %s\t\t My:%s\n", result, result2);
 		free(result);
 		free(result2);
 	}

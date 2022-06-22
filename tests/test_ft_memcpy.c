@@ -6,11 +6,14 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 15:13:56 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/17 11:52:27 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/22 09:20:04 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/header.h"
+#define RED "\e[0;31m"
+#define GRN "\e[0;32m"
+#define RESET "\e[0m"
 
 void	test_ft_memcpy(void)
 
@@ -38,8 +41,10 @@ void	test_ft_memcpy(void)
 		ft_memcpy(result, array[buffer], strlen(array[buffer]));
 		memcpy(result2, array2[buffer], strlen(array2[buffer]));
 		if (strcmp(result, result2) == 0)
-			printf("OK!!!\n");
-		printf("Origin: %s\t\t My:%s\n", result, result2);
+			printf(GRN "Teste[%i]: OK!!\n", buffer);
+		else
+			printf(RED "Teste[%i]: KO!!\n", buffer);
+		printf(RESET "Origin: %s\t\t My:%s\n", result, result2);
 		free(result);
 		free(result2);
 	}
