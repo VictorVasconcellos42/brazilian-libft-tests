@@ -6,11 +6,14 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 10:52:30 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/06/16 15:12:15 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/06/22 23:59:26 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/header.h"
+#define RED "\e[0;31m"
+#define GRN "\e[0;32m"
+#define RESET "\e[0m"
 
 void	test_ft_bzero(void)
 
